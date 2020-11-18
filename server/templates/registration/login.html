@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head_extra %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="login-page">
+  <div class="form">
+    <form id="login-form" class="login-form" method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+
+      <input id="id_username" name="username" type="text" class="form-control" placeholder="username">
+      <input id="id_password" name="password" type="password" class="form-control" placeholder="password">
+      <button><span class="lang-g-login"></span></button>
+      <input type="hidden" name="next" value="{{ next }}" />
+      <p class="message">Not registered? <a href="{% url 'signup' %}">Create an account</a></p>
+      {% if form.errors %}
+      <p class=" label label-danger">
+        Your username and password didn't match. 
+        Please try again.
+      </p>
+      {% endif %}
+    </form>
+  </div>
+</div>
