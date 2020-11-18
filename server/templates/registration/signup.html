@@ -7,7 +7,7 @@
 {% block content %}
 <div class="signup-page">
   <div class="registrationForm">
-    <form method="post">
+    <form id="signup-form" class="signup-form" method="post">
       {% csrf_token %}
       <p>
         <label for="id_username"><span class="lang-l-username"></span></label>
@@ -29,9 +29,11 @@
           </ul>
         </span>
       </p>
-      <p></p>
-      <br /><br />
+      <br />
       <button type="submit"><span class="lang-g-register"></span></button>
+      <p class="message">
+        <span class="lang-l-alreadyHaveAcc1"></span><a href="{% url 'login' %}"><span class="lang-l-alreadyHaveAcc2"></span></a>
+      </p>
     </form>
   </div>
 </div>

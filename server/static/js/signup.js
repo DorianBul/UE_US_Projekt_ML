@@ -7,6 +7,8 @@ var WORDS_L_EN = {
   passwordHelp2: "Your password must contain at least 8 characters.",
   passwordHelp3: "Your password can’t be a commonly used password.",
   passwordHelp4: "Your password can’t be entirely numeric.",
+  alreadyHaveAcc1: "Already registered? ",
+  alreadyHaveAcc2: "Log In",
 };
 
 var WORDS_L_PL = {
@@ -18,4 +20,6 @@ var WORDS_L_PL = {
   passwordHelp2: "Hasło musi być nie krótsze niż 8 znaków.",
   passwordHelp3: "Hasło nie może być popularnym hasłem.",
   passwordHelp4: "Hasło nie może być w całości numeryczne.",
+  alreadyHaveAcc1: "Masz już konto? ",
+  alreadyHaveAcc2: "Zaloguj Się",
 };

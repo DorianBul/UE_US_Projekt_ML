@@ -26,7 +26,7 @@ body {
   position: relative;
   z-index: 1;
   background: #eeebeb;
-  max-width: 420px;
+  max-width: 480px;
   margin: 0 auto 100px;
   padding: 45px;
   text-align: center;
@@ -82,15 +82,19 @@ body {
   background: #43a047;
 }
 
+.registrationForm .message,
 .form .message {
   margin: 15px 0 0;
   color: #b3b3b3;
   font-size: 12px;
+  text-align: center;
 }
 
+.registrationForm .message a,
 .form .message a {
   color: #4caf50;
   text-decoration: none;
+  text-align: center;
 }
 
 .form .register-form {

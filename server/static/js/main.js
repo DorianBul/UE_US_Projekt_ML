@@ -17,12 +17,16 @@ var WORDS_G_EN = {
   login: "Log In",
   logoff: "Log Off",
   register: "Register",
+  logRegSwitch1: "",
+  logRegSwitch2: "",
 };
 
 var WORDS_G_PL = {
   login: "Zaloguj Się",
   logoff: "Wyloguj Się",
   register: "Zarejestruj Się",
+  logRegSwitch1: "",
+  logRegSwitch2: "",
 };
 
 /*  */
