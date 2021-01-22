@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+<!-- X -->
+{% block headExtra %} {% load static %}
+<script src="{% static '/js/signup.js' %}" type="text/javascript"></script>
+{% endblock headExtra %}
+<!-- X -->
+{% block content %}
+<div class="signup-page">
+  <div class="registrationForm">
+    <form id="signup-form" class="signup-form" method="post">
+      {% csrf_token %}
+      <p>
+        <label for="id_username"><span class="lang-l-username"></span></label>
+        <input type="text" name="username" maxlength="32" autocapitalize="none" autocomplete="username" autofocus required id="id_username" />
+        <span class="helptext"><span class="lang-l-usernameHelp"></span></span>
+      </p>
+      <br />
+      <p>
+        <label for="id_password1"><span class="lang-l-password"></span></label>
+        <input type="password" name="password1" autocomplete="new-password" required id="id_password1" />
+        <label for="id_password2"><span class="lang-l-passwordConfirm"></span></label>
+        <input type="password" name="password2" autocomplete="new-password" required id="id_password2" />
+        <span class="helptext">
+          <ul>
+            <li><span class="lang-l-passwordHelp1"></span></li>
+            <li><span class="lang-l-passwordHelp2"></span></li>
+            <li><span class="lang-l-passwordHelp3"></span></li>
+            <li><span class="lang-l-passwordHelp4"></span></li>
+          </ul>
+        </span>
+      </p>
+      <br />
+      <button type="submit"><span class="lang-g-register"></span></button>
+      <p class="message">
+        <span class="lang-l-alreadyHaveAcc1"></span><a href="{% url 'login' %}"><span class="lang-l-alreadyHaveAcc2"></span></a>
+      </p>
+    </form>
+  </div>
+</div>
+{% endblock %}

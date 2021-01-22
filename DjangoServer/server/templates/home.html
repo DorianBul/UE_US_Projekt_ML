@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+<!-- X -->
+{% block headExtra %} {% load static %}
+<script src="{% static '/js/home.js' %}" type="text/javascript"></script>
+{% endblock headExtra %}
+<!-- X -->
+{% block content %} {% if user.is_authenticated %}
+<div class="home-page">
+  <div class="form">
+    <p>
+      <span class="lang-l-text1"></span>
+      <br />
+      <span class="lang-l-text2"></span>
+      <br />
+      <span class="lang-l-author1"></span>
+      <br />
+      <span class="lang-l-author2"></span>
+      <br />
+      <span class="lang-l-author3"></span>
+    </p>
+    <span class="lang-l-welcome"></span> {{ user.username }}
+    <br /><br />
+    <a href="{% url 'ml1app' %}"><button><span class="lang-l-catordog"></span></button></a>
+    <br /><br />
+    <a href="{% url 'logout' %}"><button><span class="lang-g-logoff"></span></button></a>
+  </div>
+</div>
+{% else %}
+<div class="home-page">
+  <div class="form">
+    <p>
+      <span class="lang-l-text1"></span>
+      <br />
+      <span class="lang-l-text2"></span>
+      <br />
+      <span class="lang-l-author1"></span>
+      <br />
+      <span class="lang-l-author2"></span>
+      <br />
+      <span class="lang-l-author3"></span>
+    </p>
+    <br /><br />
+    <a href="{% url 'login' %}"><button><span class="lang-g-login"></span></button></a>
+    <br /><br />
+    <a href="{% url 'signup' %}"><button><span class="lang-g-register"></span></button></a>
+  </div>
+</div>
+{% endif %}{% endblock content %}
